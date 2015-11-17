@@ -1,7 +1,6 @@
-var PololuTCP = require('node-pololu')
 var coap = require('coap')
 
-var Pololu = function(id, port, host){
+var Pololu = function(id, host, port){
   this.id = id;
 
   if (port == undefined) {
@@ -35,9 +34,11 @@ var Pololu = function(id, port, host){
 
   // getters
   this.get_line_sensor = function(callback){
-    var response = get('linesensor')
-    var line_sensor_value = JSON.parse(response.payload).linesensor
-    callback(line_sensor_value)
+    var request = get('linesensor')
+    request.once('response', function(response){
+      var line_sensor_value = JSON.parse(response.payload).linesensor
+      callback(line_sensor_value)
+    })
   }
 
   var set = function(pathname, data){

@@ -1,6 +1,6 @@
 {
   "name": "node-pololu-coap",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Control Pololu robots from Node.js using CoAP",
   "main": "pololu.js",
   "scripts": {
@@ -14,7 +14,10 @@
   "author": "Sille Van Landschoot",
   "license": "ISC",
   "dependencies": {
-    "coap": "^0.12.1",
-    "node-pololu": "0.0.1"
+    "coap": "^0.12.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
   }
 }
