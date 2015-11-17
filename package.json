@@ -2,6 +2,10 @@
   "name": "node-pololu-coap",
   "version": "0.0.1",
   "description": "Control Pololu robots from Node.js using CoAP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sillevl/node-pololu-coap.git"
+  },
   "main": "pololu.js",
   "scripts": {
     "test": "mocha"
